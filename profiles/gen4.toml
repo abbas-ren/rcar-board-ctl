@@ -1,0 +1,56 @@
+[board]
+name = "gen4"
+uart_baud = 921600
+download_prompt = "please send !"
+flashwriter_prompt = ">"
+
+[flashwriter]
+file = "ICUMX_Flash_writer_SCIF_DUMMY_CERT_EB203000_V4H.mot"
+
+[[images]]
+file = "bootparam_sa0.srec"
+target = "flash"
+save_address = "0"
+load_address = "EB200000"
+
+[[images]]
+file = "icumx_loader.srec"
+target = "flash"
+save_address = "40000"
+load_address = "EB210000"
+
+[[images]]
+file = "cert_header_sa9.srec"
+target = "flash"
+save_address = "240000"
+load_address = "EB230000"
+
+[[images]]
+file = "dummy_fw.srec"
+target = "flash"
+save_address = "280000"
+load_address = "EB240000"
+
+[[images]]
+file = "cr52_loader.srec"
+target = "flash"
+save_address = "480000"
+load_address = "E6300000"
+
+[[images]]
+file = "dummy_rtos.srec"
+target = "emmc"
+save_address = "2800"
+load_address = "E2100000"
+
+[[images]]
+file = "bl31-whitehawk.srec"
+target = "emmc"
+save_address = "a000"
+load_address = "46400000"
+
+[[images]]
+file = "u-boot-elf-whitehawk.srec"
+target = "emmc"
+save_address = "ac00"
+load_address = "50000000"
